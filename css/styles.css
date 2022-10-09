@@ -1,0 +1,182 @@
+/* there are 4 types of display "block" which is like h1 to h6 and paragraphs and list items block is atype of display
+that gives u permission to change width of the frame box but cant take another element beside it
+2nd type is "inline"  which is like img and anchor and span and it  makes the size of frame box equal to text written in it
+or whatever inside it and that type cant change its width but can take element beside it
+3rd type is "inline block" which can do both inline and block which means it can take elements beside it and
+can change its width
+4th type "none" which removes the property and it is like "visibility:hidden " which make the property just hidden but its
+dimensions is still there but inside it there is a blank
+
+example:
+.header{
+  display: inline;
+
+  display: block;
+  display: inline-block;
+  display: none;
+  visibility: hidden;
+}
+*/
+/*
+positioning we have 4 types
+1- static and that is the normal positioning that  is done by its own
+2- relative and that is used to move an element without affecting any other element in the screen we can move it left right top buttom
+with a defined value with px
+3-absolute and it is used to move element in screen relative to its parent lets say that we have a div inside the body so parent
+is body and we can move the div relatively to the margins of the body so when we say left:20px; we mean that it will move
+20 pxs away from left margin of body and right:20px; it means it will move 20 pxs away from right margin of the parent which
+is the body and when element move it affects the other elements inside the same parent lets say we have 3 boxes vertically
+and we moved the 1st box the other 2 will go  up with the size of the boxe
+4-fixed and when we say that an element is fixed in the screen then it will always appear on the screen in the same place
+while scrolling
+ example:
+ position:relative;
+ position:absolute;
+ position:static;
+ position:fixed;
+
+*/
+
+
+
+/*
+font sizing
+standard size of font is 16px=1em=100%
+so 90 px font size is equal to 562.5% or 5.625em
+font size is also relative to parent so if we made font size in body =2em and then in h1
+font size = 5 em then font size in h1 will be 10 em to standard which is 16 px but we can solve this by
+making font size in h1 equal to 5 rem "r" stands for root so that means that it will be equals to 5 times standard
+*/
+.topcontainer {
+  background-color: #EAF6F6     ;
+  position: relative;
+  padding-top: 100px;
+
+}
+
+
+
+h1 {
+  /*
+width:10%;
+here we sit the margin top and buttom to be 0 and left and right to be auto and thats how it would be centered
+margin: 0 auto ;
+
+  */
+  margin: 50 auto 0 auto;
+  font-family: 'Sacramento' ,cursive;
+  font-size: 5.625rem;
+  color:  #66BFBF;
+
+}
+
+body {
+  margin: 0;
+  /*
+  this line will make every thing inside the body that its width is not defined  is centered
+  but if we determined the width of h1 as example it has another way
+  */
+  text-align: center;
+  /* here we are saying that font in body will be merriweather in serif and if it is not in the browser then use any type
+  serif font but thtis will hardly happen because i embedd these fonts in index.html    */
+  font-family: 'Merriweather' , serif;
+  color: #40514E;
+}
+h2{
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.5rem;
+  color:  #66BFBF;
+  font-weight: normal;
+
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    color: #11999E;
+}
+.buttom-cloud{
+  position: absolute;
+  left: 300px;
+
+
+}
+.top-cloud{
+position: absolute;
+right:300px;
+top: 50px;
+}
+.pic{
+  margin-top: 50px;
+  width: 200px;
+  height: 200px;
+    border-radius: 100%;
+}
+
+.buttomcontainer{
+  background-color:  #66BFBF;
+  padding: 50px;
+}
+.macpic{
+  width: 25%;
+height: 150px;
+  border-radius: 100%;
+  float: left;
+  margin-right: 30px;
+}
+.andpic{
+  width: 25%;
+  height:150px;
+  border-radius: 100%;
+  float: right;
+
+}
+a{
+  color: #11999E;
+  padding: 20px;
+
+  text-decoration: none;
+
+}
+a:hover{
+  color: #EAF6F6;
+}
+.skill-row{
+  width: 50%;
+  margin: 100px auto 100px auto;
+  text-align: left;
+  line-height: 2;
+}
+.end{
+  color:#EAF6F6 ;
+  margin-top: 35px;
+  font-size: 0.75rem;
+  padding: 20px 0 ;
+}
+hr{
+  width: 5%;
+  border-width: 5px;
+  color:  grey;
+  border-style: none;
+  border-top-style: dotted;
+}
+.BUTTON_LTT {
+   -webkit-border-radius: 6px;
+   -moz-border-radius: 6px;
+   border-radius: 6px;
+   color: #FFFFFF;
+font-family: 'Montserrat', sans-serif;
+   font-size: 12px;
+   font-weight: 100;
+   padding: 16px;
+   background-color: #66BFBF;
+   -webkit-box-shadow: 1px 1px 20px 0 #FFFFFF;
+   -moz-box-shadow: 1px 1px 20px 0 #FFFFFF;
+   box-shadow: 1px 1px 20px 0 #FFFFFF;
+   text-shadow: 1px 1px 20px #000000;
+   border: solid #337FED 0;
+   text-decoration: none;
+   display: inline-block;
+   cursor: pointer;
+   text-align: center;
+   margin: 50px auto 50px auto;
+}
